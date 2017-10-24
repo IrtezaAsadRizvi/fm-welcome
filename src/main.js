@@ -3,6 +3,12 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import {routes} from './routers/index.js'
 
+// 3rd party Dependencies
+// import jQuery from 'jquery'
+// global.jQuery = jQuery
+// let Bootstrap = require('bootstrap')
+
+
 // Default Components
 import FmWelcome from './components/authPath/defaultComponents/fm-welcome.vue'
 import FmAbout from './components/authPath/defaultComponents/fm-about.vue'
