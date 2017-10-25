@@ -4,9 +4,10 @@ import App from './App.vue'
 import {routes} from './routers/index.js'
 
 // 3rd party Dependencies
-// import jQuery from 'jquery'
-// global.jQuery = jQuery
-// let Bootstrap = require('bootstrap')
+import jQuery from 'jquery'
+global.jQuery = global.$ = jQuery
+let Bootstrap = require('bootstrap')
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 // Default Components

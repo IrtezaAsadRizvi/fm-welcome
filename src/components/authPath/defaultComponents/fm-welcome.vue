@@ -1,6 +1,6 @@
 <template>
     <div>
-        fm welcome
+        <p id="para" class="btn btn-danger">fm welcome</p>
     </div>
 </template>
 
@@ -10,6 +10,7 @@
             return {}
         }
     }
+
 </script>
 <style>
 

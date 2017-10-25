@@ -30,7 +30,9 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
   resolve: {
@@ -46,7 +48,13 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+     $: "jquery",
+     jQuery: "jquery"
+    })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {

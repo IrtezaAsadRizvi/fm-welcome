@@ -18,6 +18,12 @@
             return {}
         }
     }
+    // styling goes here
+    $(document).ready(function(){
+      $("#para").click(function(){
+        $(this).hide();
+    });
+    });
 </script>
 <style>
     @import "../../assets/style/authPath/default.css";
