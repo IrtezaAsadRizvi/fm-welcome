@@ -30,9 +30,7 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      },
-      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      }
     ]
   },
   resolve: {
@@ -48,13 +46,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map',
-  plugins: [
-    new webpack.ProvidePlugin({
-     $: "jquery",
-     jQuery: "jquery"
-    })
-  ]
+  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -77,26 +69,3 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
-
-//
-// DEVNOTE
-//
-// we need this loader to work with scss
-//
-// "webpack": "^2.1.0-beta.25",
-// "extract-text-webpack-plugin": "^2.0.0-beta.4",
-//
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const extractCSS = new ExtractTextPlugin('./dist/css/[name].css');
-//
-// ...
-//
-//       {
-//         test: /\.scss$/,
-//         use: extractCSS.extract({
-//           fallbackLoader: 'style-loader',
-//           loader: 'css-loader!sass-loader',
-//         }),
-//       }
-//
-// plugins: [ extractCSS, ...other stuff ]
