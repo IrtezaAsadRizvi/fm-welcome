@@ -10,12 +10,48 @@
   </body>
   <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
   <script>
+      var log_hex_big = $('.hexy svg path.roundedHex');
+      var log_hex_small = $('.hexy svg path.roundedHex:nth-child(2)');
+      var section_name = $('#section-name');
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
       $('#fullpage').fullpage({
           navigation: true,
           navigationPosition: 'left',
           autoScrolling:true,
           fitToSection: false,
-          sectionsColor: ['#fff', '#EDA82D', '#40A0E6', '#fff','#AEAFB2','#EDA82D', '#40A0E6', '#fff','#AEAFB2'] //bg
+          anchors: ['welcome','about','post','community','blog','chat','study','job','video'],
+          sectionsColor: ['#37bff1', '#f2992e', '#ed5836', '#f3726f','#313639','#41a85f', '#08ddc1', '#5b6465','#32bae7'],
+          afterLoad: function(anchorLink, index){
+            $('#fm-default-nav ul li:nth-child('+index+') span').addClass("active-menu-item animated zoomIn").one(animationEnd, function() {
+                $(this).removeClass('animated zoomIn');
+            });
+            // logo color change
+            if (index == 1) { log_hex_big.addClass("welcome"); log_hex_small.addClass("welcome"); section_name.hide(150); }
+            if (index == 2) { log_hex_big.addClass("about"); log_hex_small.addClass("about"); section_name.text('About');}
+            if (index == 3) { log_hex_big.addClass("post"); log_hex_small.addClass("post"); section_name.text('Post');}
+            if (index == 4) { log_hex_big.addClass("community"); log_hex_small.addClass("community"); section_name.text('Community');}
+            if (index == 5) { log_hex_big.addClass("blog"); log_hex_small.addClass("blog"); section_name.text('Blog');}
+            if (index == 6) { log_hex_big.addClass("chat"); log_hex_small.addClass("chat"); section_name.text('Chat');}
+            if (index == 7) { log_hex_big.addClass("study"); log_hex_small.addClass("study"); section_name.text('Study');}
+            if (index == 8) { log_hex_big.addClass("job"); log_hex_small.addClass("job"); section_name.text('Job');}
+            if (index == 9) { log_hex_big.addClass("video"); log_hex_small.addClass("video"); section_name.text('Video');}
+          },
+          onLeave: function(index, nextIndex, direction){
+            section_name.show(500);
+            $('#fm-default-nav ul li:nth-child('+index+') span').addClass('animated zoomOut').one(animationEnd, function() {
+                $(this).removeClass('animated zoomOut active-menu-item');
+            });
+            // logo color change
+            if (index == 1) { log_hex_big.removeClass("welcome"); log_hex_small.removeClass("welcome"); }
+            if (index == 2) { log_hex_big.removeClass("about"); log_hex_small.removeClass("about"); }
+            if (index == 3) { log_hex_big.removeClass("post"); log_hex_small.removeClass("post"); }
+            if (index == 4) { log_hex_big.removeClass("community"); log_hex_small.removeClass("community"); }
+            if (index == 5) { log_hex_big.removeClass("blog"); log_hex_small.removeClass("blog"); }
+            if (index == 6) { log_hex_big.removeClass("chat"); log_hex_small.removeClass("chat"); }
+            if (index == 7) { log_hex_big.removeClass("study"); log_hex_small.removeClass("study"); }
+            if (index == 8) { log_hex_big.removeClass("job"); log_hex_small.removeClass("job"); }
+            if (index == 9) { log_hex_big.removeClass("video"); log_hex_small.removeClass("video"); }
+          }
       });
   </script>
 </html>

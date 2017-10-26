@@ -16,8 +16,11 @@ Vue.use(VueRouter)
 // Init Vue
 // ======================
 const router = new VueRouter({ routes:routes, mode :'history' });
-new Vue({
+var app = new Vue({
     el: '#app',
+    data: {
+        val: 1
+    },
     router,
     render: h => h(App)
 });

@@ -8,6 +8,9 @@
     export default {
         data () {
             return {}
+        },
+        mounted: function () {
+          console.log('about');
         }
     }
 </script>
