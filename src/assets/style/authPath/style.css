@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
 @import url(animate.css);
 html {
   font-family: sans-serif;
@@ -2480,7 +2480,8 @@ tbody.collapse.in {
   margin: 0;
   padding: 0;
   outline: 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #F1F1F1; }
 
 #logo {
   width: 100px;
@@ -2549,6 +2550,10 @@ tbody.collapse.in {
             fill: #5b6465; }
           #logo .hexy:nth-child(2) svg .roundedHex.video {
             fill: #32bae7; }
+
+.show {
+  display: block;
+  transition: all 0.3s ease-in-out; }
 
 /*----------------------
     Basic css shapes
@@ -2694,6 +2699,7 @@ tbody.collapse.in {
       color: #30a6d2;
       font-weight: 700;
       border: none;
+      border-radius: 2px;
       background: rgba(255, 255, 255, 0.8); }
       #fm-welcome #world-map a:hover {
         background: white; }
@@ -2766,5 +2772,102 @@ tbody.collapse.in {
     bottom: 40px;
     right: 60px;
     transform: scale(0.85); }
+
+/*----------------------
+    fm about
+------------------------*/
+#fm-about {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+  #fm-about #about-bg span {
+    height: 150vh;
+    width: 170vh;
+    background-color: #f2992e;
+    position: absolute;
+    bottom: -23%;
+    right: 60%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    transform: rotate(45deg); }
+  #fm-about #about-bg #sec-bg {
+    right: 62%; }
+  #fm-about #about-grid {
+    margin: 20% 0; }
+    #fm-about #about-grid div.col-md-4 {
+      height: 120px;
+      width: 130px;
+      margin: 0;
+      background-color: #e08d2b;
+      opacity: 0;
+      transform: translate(250px, 50px);
+      transition: 0.3s ease-in-out; }
+      #fm-about #about-grid div.col-md-4:nth-child(2n) {
+        background-color: #f2992e;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
+      #fm-about #about-grid div.col-md-4 img {
+        width: 80px;
+        height: 80px;
+        margin: 20px auto; }
+      #fm-about #about-grid div.col-md-4.is-showing {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: 0.3s ease-in-out; }
+  #fm-about #about-text {
+    text-align: left;
+    margin: 20% 0;
+    padding: 0px 50px; }
+    #fm-about #about-text h1 {
+      font-weight: 900;
+      font-size: 3em; }
+    #fm-about #about-text h4 {
+      font-weight: 700; }
+    #fm-about #about-text p {
+      margin-bottom: 30px; }
+      #fm-about #about-text p a {
+        color: #ffdc1b;
+        font-weight: 700;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0); }
+        #fm-about #about-text p a:hover {
+          background: rgba(255, 255, 255, 0); }
+    #fm-about #about-text a {
+      width: 100px;
+      height: 33px;
+      color: #e08d2b;
+      font-weight: 700;
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      margin-right: 10px;
+      border-radius: 2px; }
+      #fm-about #about-text a:hover {
+        background: white; }
+
+/*----------------------
+    fm post
+------------------------*/
+#fm-post {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../images/fm-post-bg.png");
+  background-repeat: repeat; }
+  #fm-post #post-text {
+    text-align: left;
+    margin: 10% 0;
+    padding: 0px 50px; }
+    #fm-post #post-text h1 {
+      font-weight: 900;
+      font-size: 3em; }
+      #fm-post #post-text h1 span {
+        font-weight: 400; }
+    #fm-post #post-text p {
+      margin-bottom: 30px; }
+      #fm-post #post-text p span {
+        font-weight: 700; }
+    #fm-post #post-text #post-img-1 {
+      margin-left: 30px; }
 
 /*# sourceMappingURL=style.css.map */
