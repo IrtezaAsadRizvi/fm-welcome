@@ -1,5 +1,5 @@
 <template>
-    <div id="fm-welcome">
+    <div id="fm-welcome" class="component"> 
         <div class="container">
           <!-- worldmap -->
           <div id="fm-welcome-main">

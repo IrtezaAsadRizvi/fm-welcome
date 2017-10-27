@@ -40,6 +40,12 @@
             $('#fm-default-nav ul li:nth-child('+nextIndex+') span').addClass("active-menu-item animated zoomIn").one(animationEnd, function() {
                 $(this).removeClass('animated zoomIn');
             });
+            log_hex_big.addClass('animated flash').one(animationEnd, function() {
+                $(this).removeClass('animated flash active-menu-item');
+            });
+            log_hex_big.addClass('animated flash').one(animationEnd, function() {
+                $(this).removeClass('animated flash active-menu-item');
+            });
             // logo color change when geting out
             if (index == 1) { log_hex_big.removeClass("welcome"); log_hex_small.removeClass("welcome"); }
             if (index == 2) { log_hex_big.removeClass("about"); log_hex_small.removeClass("about"); }
@@ -64,14 +70,6 @@
 
             // inside compnonet animations
             if (nextIndex == 2){
-              // random grid item animation
-              // setInterval(function(){
-              //   $('#about-grid div.col-md-4:nth-child('+(Math.floor(Math.random() * (12 - 1 + 1)) + 1)+') img').addClass("animated pulse").one(animationEnd, function() {
-              //       $(this).removeClass('animated pulse');
-              //   });
-              //   // console.log(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
-              // }, 700);
-
               // cool entry animation
               $('#about-grid div.col-md-4').each(function(i){
                 setTimeout(function(){
@@ -80,7 +78,14 @@
               })
             }
             if (nextIndex == 3) {
-              $('#post-img-1').addClass("animated slideInLeft show");
+              $('#post-img-1').addClass("animated slideInLeft");
+              $('#post-img-2').addClass("animated slideInRight");
+            }
+            if (nextIndex == 4) {
+              $('#community-img').addClass("animated slideInRight");
+            }
+            if (nextIndex == 5) {
+              $('#blog-img').addClass("animated slideInLeft");
             }
           }
       });

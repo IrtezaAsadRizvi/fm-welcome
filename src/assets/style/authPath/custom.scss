@@ -15,6 +15,15 @@
   font-family: 'Roboto', sans-serif;
   color: #F1F1F1;
 }
+p{
+  font-size: 16px;
+}
+a{
+  text-decoration: none;
+  &:hover, &:focus, &:active{
+    text-decoration: none;
+  }
+}
 #logo{
   width: 100px;
   position:fixed;
@@ -112,6 +121,21 @@
   display: block;
   transition: all 0.3s ease-in-out;
 }
+/*----------------------
+    helper classes
+------------------------*/
+.component{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.center-child{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 
 /*----------------------
     Basic css shapes
@@ -175,13 +199,6 @@
 /*----------------------
     The Default Page
 ------------------------*/
-// #vertical-line{
-//   position: fixed;
-//   left: 30px;
-//   z-index: 105;
-//   top: 45px;
-//   left: 71;
-// }
 
 #section-name-holder{
   position: fixed;
@@ -236,16 +253,18 @@
   }
 }
 
+.hexy{
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
 /*----------------------
     fm welcome
 ------------------------*/
 #fm-welcome{
-  height: 100%;
-  width: 100%;
   background-image: url('../../images/fm-welcome-bg.jpg');
   background-repeat: repeat;
-  position: relative;
-  overflow: hidden;
   div.container{
     position: relative;
     margin: 0 auto;
@@ -344,7 +363,6 @@
     	}
     }
   }
-
   // what-is
   #what-is{
     position: absolute;
@@ -404,11 +422,6 @@
 ------------------------*/
 
 #fm-about{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
   #about-bg{
     span{
       height: 150vh;
@@ -453,11 +466,13 @@
   }
   #about-text{
     text-align: left;
-    margin: 20% 0;
-    padding: 0px 50px;
+    margin: 17% 0;
+    padding-left: 80px;
+    z-index: 100;
     h1{
       font-weight: 900;
       font-size: 3em;
+      margin-bottom: 20px;
     }
     h4{
       font-weight: 700;
@@ -475,8 +490,9 @@
       }
     }
     a{
+      line-height: 2em;
       width: 100px;
-      height: 33px;
+      height: 38px;
       color: #e08d2b;
       font-weight: 700;
       border: none;
@@ -494,31 +510,255 @@
     fm post
 ------------------------*/
 #fm-post{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
   background-image: url('../../images/fm-post-bg.png');
   background-repeat: repeat;
   #post-text{
     text-align: left;
-    margin: 10% 0;
-    padding: 0px 50px;
+    padding-left: 80px;
+    z-index: 100;
+    position:relative;
+    top: 50vh;
+    transform: translateY(-50%);
     h1{
       font-weight: 900;
       font-size: 3em;
       span{
-        font-weight: 400;
+        font-weight: 300;
       }
     }
     p{
       margin-bottom: 30px;
       span{
+
         font-weight: 700;
+        margin: 20px 0px;
       }
     }
     #post-img-1{
       margin-left: 30px;
+    }
+  }
+  #post-half{
+    z-index: 110;
+    height: 100vh;
+    #post-img-2{
+      position: relative;
+      top: 40vh;
+      left: 10%;
+    }
+  }
+  #post-btns{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 120;
+    a{
+      width: 80px;
+      height: 33px;
+      color: #f1f1f1;
+      background-color: #ec5836;
+      font-weight: 700;
+      border: none;
+      margin-right: 7px;
+      margin-top: 40px;
+      border-radius: 2px;
+      box-sizing: border-box;
+      &:hover{
+        background-color: #f1f1f1;
+        color: #ec5836;
+        border: 1px solid #ec5836;
+      }
+    }
+  }
+  #post-half-bg{
+    background-color: #F1F1F1;
+    position: absolute;
+    height: 100vh;
+    width: 48vw;
+    top: 0px;
+    right: 0px;
+    span{
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      top: 10vw;
+      left: 0;
+      background-image: url('../../images/fm-post-bg.png');
+      background-repeat: repeat;
+      z-index: 50;
+    }
+    div{
+      z-index: 100;
+    }
+    #post-icon-1 img{
+      height: 30px;
+      width: 30px;
+      position: relative;
+      left: 0px;
+      top: 100px;
+    }
+    #post-icon-2 img{
+      height: 90px;
+      width: 90px;
+      position: relative;
+      left: 200px;
+      top: 100px;
+    }
+  }
+}
+
+/*----------------------
+    fm community
+------------------------*/
+#fm-community{
+  background-image: url('../../images/fm-community-bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  #community-text{
+    text-align: left;
+    margin: 17% 0;
+    padding-left: 80px;
+    z-index: 100;
+    h1{
+      font-weight: 900;
+      font-size: 3em;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+    a{
+      line-height: 2em;
+      width: 100px;
+      height: 38px;
+      color: #f3726f;
+      background-color: #F1F1F1;
+      font-weight: 700;
+      border: none;
+      margin-right: 10px;
+      margin-top: 10px;
+      border-radius: 2px;
+      box-sizing: border-box;
+      &:hover{
+        background-color: #f3726f;
+        color: #F1F1F1;
+        border: 1px solid #F1F1F1;
+      }
+    }
+  }
+  #community-img{
+    height: 350px;
+    margin-top: 40%;
+  }
+  #community-img img{
+    height: 350px;
+    width: auto;
+    position: relative;
+    // top: 12vw;
+    z-index: 100;
+  }
+}
+
+
+/*----------------------
+    fm blog
+------------------------*/
+#fm-blog{
+  #blog-text{
+    padding: 0 30px 0 0;
+    text-align: left;
+    padding-left: 80px;
+    z-index: 100;
+    margin: 100px 0 0 0;
+    h1{
+      font-weight: 900;
+      font-size: 3em;
+      color: #f1f1f1;
+      margin-bottom: 30px;
+      span{
+        font-weight: 300;
+        color: #ffdc1b;
+      }
+    }
+    #blog-img{
+      margin: 20px 0px 0px 50px;
+    }
+  }
+  #blog-btns{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    a{
+      z-index: 120;
+      width: 80px;
+      height: 33px;
+      color: #ffdc1b;
+      background-color: #313639;
+      font-weight: 700;
+      border: none;
+      margin-right: 7px;
+      margin-top: 40px;
+      border-radius: 2px;
+      box-sizing: border-box;
+      border: 1px solid #ffdc1b;
+      &:hover{
+        background-color: #ffdc1b;
+        color: #313639;
+      }
+    }
+  }
+  #blogs{
+    margin: 80px 0 0 0;
+    .row{
+      /* column width */
+    	-moz-column-width: 135px;
+    	-webkit-column-width: 135px;
+
+    	/* space between columns */
+    	-moz-column-gap: 7px;
+    	-webkit-column-gap: 7px;
+    }
+    .item{
+      display: inline-block;
+    	width: 100%;
+    }
+    .blog{
+      margin: 7px 7px;
+      &.clear-fix{
+        clear:both;
+      }
+      .blog-img{
+        width: 100%;
+        height: auto;
+      }
+      .blog-body{
+        padding: 10px;
+        text-align: left;
+        background-color: #F1F1F1;
+        box-shadow: 0px 0px 25px rgba(-10,10,20, 0.2);
+        .blog-title{
+          font-size: 8px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #111211;
+          margin: 0 0 3px 0;
+        }
+        .blog-date{
+          font-size: 6px;
+          color: #888;
+          margin: 0px 0px;
+        }
+        .blog-text{
+          font-size: 8px;
+          color: #666;
+          margin: 3px 0px;
+        }
+        a.blog-link{
+          color: #50bec3;
+          font-size: 7px;
+          cursor: pointer;
+          margin: 0;
+        }
+      }
     }
   }
 }

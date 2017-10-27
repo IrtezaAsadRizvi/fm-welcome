@@ -1,5 +1,5 @@
 <template>
-    <div id="fm-about">
+    <div id="fm-about" class="center-child component">
       <!-- the background -->
       <div id="about-bg">
         <span></span>
@@ -7,16 +7,15 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-5" id="about-text">
+          <div class="col-md-6" id="about-text">
             <h1>FREEMIG</h1>
             <h4>Let’s Learn! Go Earn! Boost your activities with fun!</h4>
-            <p>Freemig, all in a package is just in your fingertips. Avail opportunities as Freemig knows your ultimate desire.<br>
-               <a href="#">Sign up</a> and shape your world.
+            <p>Freemig, all in a package is just in your fingertips. Avail opportunities as Freemig knows your ultimate desire. <a href="#">Sign up</a> and shape your world.
             </p>
             <a class="btn btn-default">Sign In</a>
             <a class="btn btn-default">Sign Up</a>
           </div>
-          <div class="col-md-5 col-md-offset-2 container">
+          <div class="col-md-5 col-md-offset-1 container">
             <!-- about-grid -->
             <div id="about-grid">
               <div class="row" style="width:400px">
