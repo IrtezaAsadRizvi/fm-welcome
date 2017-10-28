@@ -7,10 +7,10 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-6" id="about-text">
+          <div class="col-md-6 section-text" id="about-text">
             <h1>FREEMIG</h1>
             <h4>Let’s Learn! Go Earn! Boost your activities with fun!</h4>
-            <p>Freemig, all in a package is just in your fingertips. Avail opportunities as Freemig knows your ultimate desire. <a href="#">Sign up</a> and shape your world.
+            <p>Freemig, all in a package is just in your fingertips. Avail opportunities as Freemig knows your ultimate desire.<a href="#">Sign up</a> and shape your world.
             </p>
             <a class="btn btn-default">Sign In</a>
             <a class="btn btn-default">Sign Up</a>

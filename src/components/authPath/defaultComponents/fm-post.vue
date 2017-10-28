@@ -9,7 +9,7 @@
           <div class="col-md-6" id="post-text">
             <h1>POST <span>& NEWSFEED</span></h1>
             <p>
-              <span>Do we all have an idea how this works?</span><br>
+              <span>Do we all have an idea how this works?</span><br><br>
               A bucket with mood activities, a pile of interests,
               and a switch to filter regular to professional life can
               gives you a blow with excitement.

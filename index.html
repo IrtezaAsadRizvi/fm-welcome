@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>wellcome-fm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div id="app"></div>
@@ -14,13 +15,21 @@
       var log_hex_small = $('.hexy svg path.roundedHex:nth-child(2)');
       var section_name = $('#section-name');
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      // sass --watch src/assets/style/authPath/_bootstrap.scss:src/assets/style/authPath/style.css
+      // redirect small screen users
+      if ($(window).width() < 1024) {
+         window.location.href = "/signIn";
+      }
+      setInterval(function () {
+        $('#bulb-container div.study-bulb').toggleClass('bulb-off');
+      },300);
       $('#fullpage').fullpage({
           navigation: true,
           navigationPosition: 'left',
           autoScrolling:true,
           fitToSection: false,
           anchors: ['welcome','about','post','community','blog','chat','study','job','video'],
-          sectionsColor: ['#37bff1', '#f2992e', '#ec5836', '#f3726f','#313639','#41a85f', '#08ddc1', '#5b6465','#32bae7'],
+          sectionsColor: ['#37bff1', '#f2992e', '#ec5836', '#f3726f','#313639','#28324e', '#08ddc1', '#5b6465','#32bae7'],
           afterLoad: function(anchorLink, index){
             if (index == 1) {
               log_hex_big.addClass("welcome");
@@ -40,12 +49,7 @@
             $('#fm-default-nav ul li:nth-child('+nextIndex+') span').addClass("active-menu-item animated zoomIn").one(animationEnd, function() {
                 $(this).removeClass('animated zoomIn');
             });
-            log_hex_big.addClass('animated flash').one(animationEnd, function() {
-                $(this).removeClass('animated flash active-menu-item');
-            });
-            log_hex_big.addClass('animated flash').one(animationEnd, function() {
-                $(this).removeClass('animated flash active-menu-item');
-            });
+
             // logo color change when geting out
             if (index == 1) { log_hex_big.removeClass("welcome"); log_hex_small.removeClass("welcome"); }
             if (index == 2) { log_hex_big.removeClass("about"); log_hex_small.removeClass("about"); }
@@ -68,8 +72,13 @@
             if (nextIndex == 8) { log_hex_big.addClass("job"); log_hex_small.addClass("job"); section_name.text('Job');}
             if (nextIndex == 9) { log_hex_big.addClass("video"); log_hex_small.addClass("video"); section_name.text('Video');}
 
+            if(index == 7){
+              $('#bulb-container div.study-bulb').removeClass('bulb-off');
+            }
+
             // inside compnonet animations
             if (nextIndex == 2){
+              $('#about-text').addClass('animated slideInUp');
               // cool entry animation
               $('#about-grid div.col-md-4').each(function(i){
                 setTimeout(function(){
@@ -82,10 +91,24 @@
               $('#post-img-2').addClass("animated slideInRight");
             }
             if (nextIndex == 4) {
+              $('#community-text').addClass('animated slideInUp');
               $('#community-img').addClass("animated slideInRight");
             }
             if (nextIndex == 5) {
               $('#blog-img').addClass("animated slideInLeft");
+            }
+            if (nextIndex == 6) {
+              $('#chat-text h1').addClass("animated slideInUp");
+              $('#chat-text p').addClass("animated slideInUp");
+            }
+            if (nextIndex == 7) {
+              $('#study-little-man').addClass("animated slideInDown");
+              $('#study-text h1 #study-pen-cup').addClass("animated slideInRight");
+              $('#study-pencil').addClass("animated slideInLeft");
+            }
+            if (nextIndex == 8){
+              $('#job-page').addClass("is-showing");
+              $('#job-meeting').addClass("animated slideInLeft");
             }
           }
       });

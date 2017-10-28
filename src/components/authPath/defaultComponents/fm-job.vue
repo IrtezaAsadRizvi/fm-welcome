@@ -1,6 +1,23 @@
 <template>
-    <div>
-        fm job
+  <div id="fm-job" class="center-child component">
+      <div class="container">
+        <div class="row pull-right" id="job-btns">
+          <a class="btn btn-default">Log In</a>
+          <a class="btn btn-default">Sign Up</a>
+        </div>
+        <div class="row">
+          <div class="col-md-6 section-text" id="job-text">
+            <h1>JOB <span id="search-icon"></span><span>BOARD</span></h1>
+            <p>Turns out that when you make it easy to create interesting things, that’s exactly what people do. All those great, random blogs your friends send you, those are Tumblr blogs.</p>
+            <div id="job-meeting"></div>
+
+          </div>
+          <div class="col-md-6 container" id="job-img-holder">
+            <div id="job-page"></div>
+            <div id="job-laptop"></div>
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 
