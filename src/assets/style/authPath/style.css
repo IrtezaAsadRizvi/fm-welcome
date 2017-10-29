@@ -2699,6 +2699,15 @@ a {
 #fm-welcome {
   background-image: url("../../images/fm-welcome-bg.jpg");
   background-repeat: repeat; }
+  #fm-welcome #welcome-laptop {
+    position: absolute;
+    top: -70px;
+    right: -50px;
+    width: 500px;
+    height: 350px;
+    background-image: url("../../images/laptop.png");
+    background-repeat: repeat;
+    background-size: cover; }
   #fm-welcome div.container {
     position: relative;
     margin: 0 auto;
@@ -2707,6 +2716,253 @@ a {
   #fm-welcome #fm-welcome-main {
     position: relative;
     top: 30%; }
+    #fm-welcome #fm-welcome-main #welcome-content .form-holder {
+      width: 360px;
+      height: 533px;
+      position: absolute;
+      top: -140px;
+      left: 0px; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton {
+        color: white;
+        border: none;
+        outline: none;
+        font-weight: 700;
+        border-radius: 2px;
+        background-color: transparent;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          padding: 30px 20px 20px 20px; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-in-htm,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-up-htm {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transition: all .4s linear;
+          transition: all .4s linear; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-in,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-up,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .check {
+          display: none; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .tab {
+          font-size: 18px;
+          margin-right: 15px;
+          padding-bottom: 5px;
+          margin: 0 15px 10px 0;
+          display: inline-block;
+          border-bottom: 2px solid transparent; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-in:checked + .tab,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-up:checked + .tab {
+          color: #fff;
+          border-color: #f1f1f1;
+          cursor: pointer; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form {
+          min-height: 345px;
+          position: relative;
+          -webkit-perspective: 1000px;
+          perspective: 1000px;
+          -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group {
+          margin-bottom: 15px; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .label,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .input,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .button {
+          width: 100%;
+          color: #fff;
+          display: block; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .input,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .button {
+          border: none;
+          padding: 8px 10px;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 0.1); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group input[data-type="password"] {
+          text-security: circle;
+          -webkit-text-security: circle; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .label {
+          color: #f1f1f1;
+          font-size: 12px; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .button {
+          background: #32adda;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group label .icon {
+          width: 15px;
+          height: 15px;
+          border-radius: 2px;
+          position: relative;
+          display: inline-block;
+          background: rgba(255, 255, 255, 0.1); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group label .icon:before,
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group label .icon:after {
+          content: '';
+          width: 10px;
+          height: 2px;
+          background: #fff;
+          position: absolute;
+          -webkit-transition: all .2s ease-in-out 0s;
+          transition: all .2s ease-in-out 0s; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group label .icon:before {
+          left: 3px;
+          width: 5px;
+          bottom: 6px;
+          -webkit-transform: scale(0) rotate(0);
+          transform: scale(0) rotate(0); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group label .icon:after {
+          top: 6px;
+          right: 0;
+          -webkit-transform: scale(0) rotate(0);
+          transform: scale(0) rotate(0); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .check:checked + label {
+          color: #fff; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .check:checked + label .icon {
+          background: #32adda; }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .check:checked + label .icon:before {
+          -webkit-transform: scale(1) rotate(45deg);
+          transform: scale(1) rotate(45deg); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-form .group .check:checked + label .icon:after {
+          -webkit-transform: scale(1) rotate(-45deg);
+          transform: scale(1) rotate(-45deg); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+          -webkit-transform: rotate(0);
+          transform: rotate(0); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+          -webkit-transform: rotate(0);
+          transform: rotate(0); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .hr {
+          height: 2px;
+          margin: 10px 0;
+          background: rgba(255, 255, 255, 0.2); }
+        #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .foot-lnk {
+          text-align: center; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .btn-text {
+        z-index: 2;
+        display: block;
+        padding: 7px 20px;
+        position: absolute;
+        width: 150px;
+        height: 33px;
+        background-color: #f1f1f1;
+        color: #32adda;
+        top: 320px;
+        left: 100px;
+        border-radius: 3px; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .btn-text:hover {
+        cursor: pointer; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton:hover {
+        cursor: default; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton.active .modal {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1); }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder #mainButton .modal {
+        background-color: #32adda;
+        background-image: url("../../images/welcome-form-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: inherit;
+        transform-origin: center center;
+        transform: scale(0);
+        transition: all 0.2s ease-in; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .close-button {
+        top: 20px;
+        right: 20px;
+        position: absolute;
+        -webkit-transition: opacity 0.2s ease-in;
+        -moz-transition: opacity 0.2s ease-in;
+        -ms-transition: opacity 0.2s ease-in;
+        -o-transition: opacity 0.2s ease-in;
+        transition: opacity 0.2s ease-in; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .close-button:hover {
+        opacity: 0.5;
+        cursor: pointer; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .form-title {
+        margin-bottom: 15px; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .form-button {
+        width: 100%;
+        padding: 10px;
+        color: #00a7ee;
+        margin-top: 10px;
+        max-width: 400px;
+        text-align: center;
+        border: solid 1px white;
+        background-color: white;
+        -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+        -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+        -ms-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+        -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+        transition: color 0.2s ease-in, background-color 0.2s ease-in; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .form-button:hover {
+        color: white;
+        cursor: pointer;
+        background-color: transparent; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group {
+        width: 100%;
+        font-size: 16px;
+        max-width: 400px;
+        padding-top: 20px;
+        position: relative;
+        margin-bottom: 15px; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group input {
+        width: 100%;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 5px 0;
+        line-height: 1;
+        font-size: 16px;
+        font-family: 'Raleway';
+        border-bottom: solid 1px white;
+        background-color: transparent;
+        -webkit-transition: box-shadow 0.2s ease-in;
+        -moz-transition: box-shadow 0.2s ease-in;
+        -ms-transition: box-shadow 0.2s ease-in;
+        -o-transition: box-shadow 0.2s ease-in;
+        transition: box-shadow 0.2s ease-in; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group input + label {
+        left: 0;
+        top: 20px;
+        position: absolute;
+        pointer-events: none;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group input:focus {
+        box-shadow: 0 1px 0 0 white; }
+      #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group input:focus + label, #fm-welcome #fm-welcome-main #welcome-content .form-holder .input-group input.active + label {
+        font-size: 12px;
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px); }
     #fm-welcome #fm-welcome-main img {
       height: 80px;
       width: auto;
@@ -3421,6 +3677,15 @@ a {
     background-image: url("../../images/fm-video-img.png");
     background-size: contain;
     left: 10%; }
+    #fm-video #video-half #video-img-2 #video-link {
+      width: 388px;
+      height: 265px;
+      background-image: url("../../images/youtube-vid.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      top: 20px;
+      left: 20px; }
 #fm-video #video-btns {
   position: absolute;
   top: 0;
@@ -3468,5 +3733,136 @@ a {
     z-index: 50; }
   #fm-video #video-half-bg div {
     z-index: 100; }
+
+#form {
+  position: relative;
+  background-image: url("../../images/fm-welcome-bg.jpg");
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px; }
+  #form img.logo {
+    height: 80px;
+    width: auto; }
+  #form p.big-p {
+    font-size: 1.5em;
+    margin: 0px auto;
+    margin-bottom: 40px; }
+  #form form {
+    text-align: center; }
+    #form form ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #fff; }
+    #form form :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #fff;
+      opacity: 1; }
+    #form form ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #fff;
+      opacity: 1; }
+    #form form :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #fff; }
+    #form form ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #fff; }
+    #form form input.form-control {
+      background: transparent;
+      color: #f1f1f1;
+      border: 1px solid #FFF;
+      border-radius: 4px; }
+    #form form button.form-btn {
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      color: #32adda;
+      border: none;
+      margin: 0 auto;
+      text-align: center; }
+    #form form #or-line {
+      overflow: hidden;
+      text-align: center;
+      margin: 20px 0px; }
+    #form form #or-line:before,
+    #form form #or-line:after {
+      background-color: #fff;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%; }
+    #form form #or-line:before {
+      right: 0.5em;
+      margin-left: -50%; }
+    #form form #or-line:after {
+      left: 0.5em;
+      margin-right: -50%; }
+    #form form #sign-up-link {
+      font-weight: 700;
+      margin-left: 20px; }
+    #form form button.social-btn {
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+    #form form #sign-up-link {
+      height: 60px;
+      font-weight: 700;
+      font-size: 1.1em;
+      color: #f1f1f1;
+      cursor: hover;
+      position: relative;
+      top: 20px; }
+  #form .footer-content {
+    margin-top: 50px; }
+    #form .footer-content #app-links {
+      margin-top: 20px; }
+      #form .footer-content #app-links a {
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 20px;
+        background: linear-gradient(#00beeb, #0a98bc);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        color: #f1f1f1; }
+        #form .footer-content #app-links a:hover {
+          color: #f1f1f1; }
+  #form #thank-you-box {
+    width: 100%;
+    height: auto;
+    background-color: #42bbe8;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 120px;
+    padding: 50px;
+    padding-top: 90px; }
+    #form #thank-you-box .resend-btn {
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      color: #32adda;
+      font-weight: 700;
+      border: none;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 25px;
+      margin-top: 20px; }
+    #form #thank-you-box #smiley {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      background-image: url("../../images/smiley.png");
+      background-repeat: no-repeat;
+      background-size: contain; }
 
 /*# sourceMappingURL=style.css.map */

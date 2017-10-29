@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>wellcome-fm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="app"></div>
@@ -16,13 +17,33 @@
       var section_name = $('#section-name');
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
       // sass --watch src/assets/style/authPath/_bootstrap.scss:src/assets/style/authPath/style.css
+      // default page form animations
+      var button = document.getElementById('mainButton');
+      var openForm = function() {
+      	button.className = 'active';
+      };
+      var checkInput = function(input) {
+      	if (input.value.length > 0) {
+      		input.className = 'active';
+      	} else {
+      		input.className = '';
+      	}
+      };
+      var closeForm = function() {
+      	button.className = '';
+      };
+      document.addEventListener("keyup", function(e) {
+      	if (e.keyCode == 27 || e.keyCode == 13) {
+      		closeForm();
+      	}
+      });
       // redirect small screen users
       if ($(window).width() < 1024) {
          window.location.href = "/signIn";
       }
-      setInterval(function () {
-        $('#bulb-container div.study-bulb').toggleClass('bulb-off');
-      },300);
+      // setInterval(function () {
+      //   $('#bulb-container div.study-bulb').toggleClass('bulb-off');
+      // },300);
       $('#fullpage').fullpage({
           navigation: true,
           navigationPosition: 'left',
@@ -38,6 +59,7 @@
               $('#fm-default-nav ul li:nth-child(1) span').addClass("active-menu-item animated zoomIn").one(animationEnd, function() {
                   $(this).removeClass('animated zoomIn');
               });
+
             }
           },
           onLeave: function(index, nextIndex, direction){
@@ -109,6 +131,9 @@
             if (nextIndex == 8){
               $('#job-page').addClass("is-showing");
               $('#job-meeting').addClass("animated slideInLeft");
+            }
+            if (nextIndex == 9){
+              $('#video-img-2').addClass("animated slideInRight");
             }
           }
       });

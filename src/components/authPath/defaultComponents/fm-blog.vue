@@ -1,8 +1,8 @@
 <template>
   <div id="fm-blog" class="center-child component">
     <div class="row pull-right" id="blog-btns">
-      <a class="btn btn-default">Log In</a>
-      <a class="btn btn-default">Sign Up</a>
+      <a  href="/signIn" class="btn btn-default">Log In</a>
+      <a  href="/signup" class="btn btn-default">Sign Up</a>
     </div>
     <div class="container">
       <div class="row">

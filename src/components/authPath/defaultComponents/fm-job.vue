@@ -2,8 +2,8 @@
   <div id="fm-job" class="center-child component">
       <div class="container">
         <div class="row pull-right" id="job-btns">
-          <a class="btn btn-default">Log In</a>
-          <a class="btn btn-default">Sign Up</a>
+          <a  href="/signIn" class="btn btn-default">Log In</a>
+          <a  href="/signup" class="btn btn-default">Sign Up</a>
         </div>
         <div class="row">
           <div class="col-md-6 section-text" id="job-text">

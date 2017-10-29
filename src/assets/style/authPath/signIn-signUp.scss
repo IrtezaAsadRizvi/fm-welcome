@@ -1,0 +1,152 @@
+#form{
+  position: relative;
+  background-image: url('../../images/fm-welcome-bg.jpg');
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  img.logo{
+    height: 80px;
+    width: auto;
+  }
+  p.big-p{
+    font-size: 1.5em;
+    margin: 0px auto;
+    margin-bottom: 40px;
+  }
+  form{
+    text-align: center;
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #fff;
+       opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #fff;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #fff;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #fff;
+    }
+    input.form-control{
+      background: transparent;
+      color: #f1f1f1;
+      border: 1px solid #FFF;
+      border-radius: 4px;
+    }
+    button.form-btn{
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      color: #32adda;
+      border: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #or-line {
+      overflow: hidden;
+      text-align: center;
+      margin: 20px 0px;
+    }
+    #or-line:before,
+    #or-line:after {
+        background-color: #fff;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+    #or-line:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+    #or-line:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+    #sign-up-link{
+      font-weight: 700;
+      margin-left: 20px;
+    }
+    button.social-btn{
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0px 0px 10px rgba(0,0,0, 0.3);
+    }
+
+    #sign-up-link{
+      height: 60px;
+      font-weight: 700;
+      font-size: 1.1em;
+      color: #f1f1f1;
+      cursor: hover;
+      position: relative;
+      top: 20px;
+    }
+  }
+  .footer-content{
+    margin-top: 50px;
+    #app-links{
+      margin-top: 20px;
+      a{
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 20px;
+        background: linear-gradient(#00beeb, #0a98bc);
+        box-shadow: 0px 0px 10px rgba(0,0,0, 0.3);
+        color: #f1f1f1;
+        &:hover{
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+  #thank-you-box{
+    width: 100%;
+    height: auto;
+    background-color: #42bbe8;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.3);
+    margin-top: 120px;
+    padding: 50px;
+    padding-top: 90px;
+    .resend-btn{
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      color: #32adda;
+      font-weight: 700;
+      border: none;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 25px;
+      margin-top: 20px; 
+    }
+    #smiley{
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      background-image: url('../../images/smiley.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+}

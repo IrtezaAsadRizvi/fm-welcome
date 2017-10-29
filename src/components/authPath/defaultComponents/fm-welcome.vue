@@ -1,17 +1,85 @@
 <template>
-    <div id="fm-welcome" class="component"> 
+    <div id="fm-welcome" class="component">
         <div class="container">
           <!-- worldmap -->
           <div id="fm-welcome-main">
             <div class="row">
-              <div class="col-md-5">
-                <img src="../../../assets/images/logo-full.png" class="animated slideInUp">
-                <p class="animated slideInUp">Connect.Share.Learn.Earn.</p>
+              <div id="welcome-content" class="col-md-5">
+                <img src="../../../assets/images/logo-full.png">
+                <p >Connect.Share.Learn.Earn.</p>
+                <div class="form-holder">
+                  <div id="mainButton" style="background-image: url('../../../images/welcome-form-bg.png')">
+                  	<div class="btn-text" onclick="openForm()">Log In or Sign Up</div>
+                  	<div class="modal">
+                      <div class="login-html">
+                        <div class="close-button" onclick="closeForm()">close</div>
+                    		<input id="tab-1" type="radio" name="tab" class="sign-in" style="cursor:pointer" checked><label for="tab-1" class="tab">Log In</label>
+                    		<input id="tab-2" type="radio" name="tab" class="sign-up" style="cursor:pointer"><label for="tab-2" class="tab">Sign Up</label>
+                    		<div class="login-form">
+                    			<div class="sign-in-htm">
+                    				<div class="group">
+                    					<label for="user" class="label">Username</label>
+                    					<input id="user" type="text" class="input">
+                    				</div>
+                    				<div class="group">
+                    					<label for="pass" class="label">Password</label>
+                    					<input id="pass" type="password" class="input" data-type="password">
+                    				</div>
+                    				<div class="group">
+                    					<input id="check" type="checkbox" class="check" checked>
+                    					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    				</div>
+                    				<div class="group">
+                    					<input type="submit" class="button" value="Sign In">
+                    				</div>
+                    				<div class="hr"></div>
+                            <div class="group">
+                    					<input type="submit" class="button" value="Log In with Facebook" style="background-color:#2f5b9d">
+                    				</div>
+                            <div class="group">
+                    					<input type="submit" class="button" value="Log In with Twitter" style="background-color:#38bff1">
+                    				</div>
+                            <div class="group">
+                    					<input type="submit" class="button" value="Log In with Google" style="background-color:#df472f">
+                    				</div>
+                    				<div class="foot-lnk">
+                    					<a href="#forgot">Forgot Password?</a>
+                    				</div>
+                    			</div>
+                    			<div class="sign-up-htm">
+                            <div class="group">
+                    					<label for="pass" class="label">Email Address</label>
+                    					<input id="pass" type="text" class="input">
+                    				</div>
+                    				<div class="group">
+                    					<label for="pass" class="label">Password</label>
+                    					<input id="pass" type="password" class="input" data-type="password">
+                    				</div>
+                    				<div class="group">
+                    					<label for="pass" class="label">Repeat Password</label>
+                    					<input id="pass" type="password" class="input" data-type="password">
+                    				</div>
 
+                    				<div class="group">
+                    					<input type="submit" class="button" value="Sign Up">
+                    				</div>
+                    				<div class="group">
+                    					<input type="submit" class="button" value="Log In with Facebook" style="background-color:#2f5b9d">
+                    				</div>
+                            <div class="group">
+                    					<input type="submit" class="button" value="Log In with Twitter" style="background-color:#38bff1">
+                    				</div>
+                            <div class="group">
+                    					<input type="submit" class="button" value="Log In with Google" style="background-color:#df472f">
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                  	</div>
+                  </div>
+                </div>
                 <!-- world-map -->
                 <div id="world-map" class="animated fadeIn">
-                  <a class="btn btn-default" style="left: 45px;">Log In</a>
-                  <a class="btn btn-default" style="left: 165px;">Sign Up</a>
                   <!-- pulse-box 1 -->
                   <div class="pulse-box">
                     <svg class="pulse-svg" width="10px" height="10px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -87,8 +155,12 @@
                 </div>
                 <!-- end of world-map -->
               </div>
+              <div class="col-md-7" style="position:relative">
+                <div id="welcome-laptop" class="animated slideInRight"></div>
+              </div>
             </div>
           </div>
+
           <!-- what is freemig -->
           <div id="what-is">
             <a href="#about"><span>What is Freemig?</span></a>
