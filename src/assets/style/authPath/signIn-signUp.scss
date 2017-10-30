@@ -37,6 +37,17 @@
     ::-ms-input-placeholder { /* Microsoft Edge */
        color:    #fff;
     }
+    #activation-code-input{
+      margin: 10px 0px;
+      label{
+        font-size: 1.2em;
+      }
+      input.inputs{
+        width: 22px;
+        background: transparent;
+        border:1px solid #fff;
+      }
+    }
     input.form-control{
       background: transparent;
       color: #f1f1f1;
@@ -134,7 +145,7 @@
       margin: 0 auto;
       text-align: center;
       padding: 10px 25px;
-      margin-top: 20px; 
+      margin-top: 20px;
     }
     #smiley{
       position: absolute;

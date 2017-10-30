@@ -16,7 +16,7 @@
       var log_hex_small = $('.hexy svg path.roundedHex:nth-child(2)');
       var section_name = $('#section-name');
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-      // sass --watch src/assets/style/authPath/_bootstrap.scss:src/assets/style/authPath/style.css
+
       // default page form animations
       var button = document.getElementById('mainButton');
       var openForm = function() {
@@ -37,6 +37,17 @@
       		closeForm();
       	}
       });
+      //activation-code-input
+      $(".inputs").keyup(function () {
+         $this=$(this);
+         if ($this.val().length >=$this.data("maxlength")) {
+           if($this.val().length>$this.data("maxlength")){
+             $this.val($this.val().substring(0,4));
+           }
+           $this.next(".inputs").focus();
+         }
+      });
+
       // redirect small screen users
       if ($(window).width() < 1024) {
          window.location.href = "/signIn";

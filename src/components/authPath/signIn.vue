@@ -5,7 +5,7 @@
         <p class="big-p">Connect.Share.Learn.Earn.</p>
         <form class="text-center">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Username/email">
+            <input type="text" class="form-control" placeholder="Username/Email">
           </div>
           <div class="form-group">
             <input type="password" class="form-control" placeholder="Password">

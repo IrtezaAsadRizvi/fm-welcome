@@ -3771,6 +3771,14 @@ a {
     #form form ::-ms-input-placeholder {
       /* Microsoft Edge */
       color: #fff; }
+    #form form #activation-code-input {
+      margin: 10px 0px; }
+      #form form #activation-code-input label {
+        font-size: 1.2em; }
+      #form form #activation-code-input input.inputs {
+        width: 22px;
+        background: transparent;
+        border: 1px solid #fff; }
     #form form input.form-control {
       background: transparent;
       color: #f1f1f1;
